@@ -1,9 +1,0 @@
-//priority: 0
-"use strict";
-const registerMCARecipes = (event) => {
-	
-	event.remove({id: 'mca:rose_gold_ingot'})
-	event.remove({id: 'mca:rose_gold_dust'})
-	event.remove({id: 'mca:rose_gold_block'})
-	
-}

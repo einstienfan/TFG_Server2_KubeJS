@@ -9,21 +9,17 @@ global.MCA_DISABLED_ITEMS = [
 
 ]
 
-global.MCA_WOOD_TYPES_TFC = [
-    ['birch','birch'],
-    ['oak','oak'],
-    ['spruce','cypress'],
+global.MCA_WOOD_TYPES = [
+    ['birch','birch', 'tfc'],
+    ['oak','oak,', 'tfc'],
+    ['spruce','cypress', 'tfc'],
     ['dark_oak'],
     ['jungle'],
+    ['acacia','baobab', 'afc'],
+    ['cherry','fig', 'afc'],
+    ['crimson', 'crimson', 'beneath'],
+    ['warped', 'warped', 'beneath'],
     ['mangrove']
-]
-global.MCA_WOOD_TYPES_AFC = [
-    ['acacia','baobab'],
-    ['cherry','fig']
-]
-global.MCA_WOOD_TYPES_BENEATH = [
-    ['crimson', 'crimson'],
-    ['warped', 'warped']
 ]
 
 global.MCA_COLOR_TYPES = [

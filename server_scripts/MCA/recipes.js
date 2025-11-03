@@ -2,15 +2,17 @@
 "use strict";
 const registerMCARecipes = (event) => {
 	
+	//Fix Duplicate Rose Gold
 	event.remove({id: 'mca:rose_gold_ingot'})
 	event.remove({id: 'mca:rose_gold_dust_from_ingot'})
 	event.remove({id: 'mca:rose_gold_block'})
-	
 	event.replaceInput(
 		{ mod: 'mca'},
 		'mca:rose_gold_ingot',
 		'gtceu:rose_gold_ingot'
 	)
+
+	//Replace stones wiht tfc tags
 	event.replaceInput(
 		{ mod: 'mca'},
 		'minecraft:stone',
@@ -27,15 +29,15 @@ const registerMCARecipes = (event) => {
 		//Fix recipe based off wood type
 		global.MCA_WOOD_TYPES.forEach(wood => {
 			event.shaped(
-				Item.of('mca:'.concat(color, "_", wood, "_crib"))
+				Item.of('mca:'.concat(color, "_", wood[0], "_crib"))
 				[
 					'A A',
 					'ACA',
 					'BBB'
 				],
 				{
-					A: 'tfc:wood/planks/'.concat(wood, "_fence"),
-					B: 'tfc:wood/planks/'.concat(wood),
+					A:  wood[2].concat[':wood/planks/', wood[1], '_fence'],
+					B:  wood[2].concat[':wood/planks/', wood[1]],
 					C: 'minecraft:'.concat(color, '_carpet')
 				}
 			)
