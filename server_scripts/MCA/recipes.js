@@ -29,15 +29,15 @@ const registerMCARecipes = (event) => {
 		//Fix recipe based off wood type
 		global.MCA_WOOD_TYPES.forEach(wood => {
 			event.shaped(
-				Item.of('mca:'.concat(color, "_", wood[0], "_crib"))
+				Item.of("mca:".concat(color, "_", wood[0], "_crib"), 1),
 				[
 					'A A',
 					'ACA',
 					'BBB'
 				],
 				{
-					A:  wood[2].concat[':wood/planks/', wood[1], '_fence'],
-					B:  wood[2].concat[':wood/planks/', wood[1]],
+					A:  wood[2] + ':wood/planks/' +  wood[1] + '_fence',
+					B:  wood[2] + ':wood/planks/' +  wood[1],
 					C: 'minecraft:'.concat(color, '_carpet')
 				}
 			)
