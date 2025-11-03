@@ -37,7 +37,7 @@ const registerMCARecipes = (event) => {
 				],
 				{
 					A:  wood[2] + ':wood/planks/' +  wood[1] + '_fence',
-					B:  wood[2] + ':wood/planks/' +  wood[1],
+					B:  wood[2] + ':wood/lumber/' +  wood[1],
 					C: 'minecraft:'.concat(color, '_carpet')
 				}
 			)

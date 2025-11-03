@@ -60,6 +60,7 @@ ServerEvents.tags('item', event => {
 
 	//custom
 	registerMCAItemTags(event)
+	registerWEATHER2Tags(event)
 })
 
 /**
@@ -279,6 +280,7 @@ ServerEvents.recipes(event => {
 
 	//custom
 	registerMCARecipes(event)
+	registerWEATHER2Recipes(event)
 })
 
 TaCZServerEvents.gunIndexLoad((event) => {
