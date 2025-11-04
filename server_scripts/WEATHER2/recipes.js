@@ -6,22 +6,65 @@ const registerWEATHER2Recipes = (event) => {
         event.remove({id: item})
     })
 
-    //Fix TFC Compatability Recipes
-    event.replaceInput(
-        {mod: 'tfcweather'},
-        '#tfc:brass_mechanisms',
-        'gtceu:small_brass_gear'
-    )
-    event.replaceInput(
-        {mod: 'tfcweather'},
-        '#forge:rods/cast_iron',
-        '#forge:rods/iron'
-    )
-    event.replaceInput(
-        {mod: 'tfcweather'},
-        '#forge:sheets/cast_iron',
-        '#forge:sheets/iron'
-    )
+    //Fix TFC Compatability Recipes en masse
+    global.WEATHER2_TFC_METAL_TYPES.forEach(metal => {
+        //Anemometer
+        event.remove({id: 'tfcweather:crafting/blocks/metal/anemometer/' + metal})
+        event.shaped('tfcweather:metal/anemometer/' + metal,
+            [
+                'ABA',
+                'ACA'
+            ],
+            {
+                A: 'gtceu:double_' + metal + '_plate',
+                B: 'gtceu:small_brass_gear',
+                C: 'gtceu:' + metal + '_rod'
+            }
+        ).id('tfgc:weather2/shaped/anemometer/' + metal)
+        //Wind Vane
+        event.remove({id: 'tfcweather:crafting/blocks/metal/wind_vane/' + metal})
+        event.shaped('tfcweather:metal/wind_vane/' + metal,
+            [
+                'ACA',
+                'ABA',
+                'ACA'
+            ],
+            {
+                A: 'gtceu:double_' + metal + '_plate',
+                B: 'gtceu:small_brass_gear',
+                C: 'gtceu:' + metal + '_rod'
+            }
+        ).id('tfgc:weather2/shaped/wind_vane/' + metal)
+    })
+
+    //Stupid ~~cast~~ iron recipes
+    event.remove({id: 'tfcweather:crafting/blocks/metal/anemometer/cast_iron'})
+        event.shaped('tfcweather:metal/anemometer/cast_iron',
+            [
+                'A A',
+                'ABA',
+                'ACA'
+            ],
+            {
+                A: 'gtceu:double_iron_plate',
+                B: 'gtceu:small_brass_gear',
+                C: 'gtceu:iron_rod'
+            }
+        ).id('tfgc:weather2/shaped/anemometer/cast_iron')
+        //Wind Vane
+        event.remove({id: 'tfcweather:crafting/blocks/metal/wind_vane/cast_iron'})
+        event.shaped('tfcweather:metal/wind_vane/cast_iron',
+            [
+                'ACA',
+                'ABA',
+                'ACA'
+            ],
+            {
+                A: 'gtceu:double_iron_plate',
+                B: 'gtceu:small_brass_gear',
+                C: 'gtceu:iron_rod'
+            }
+        ).id('tfgc:weather2/shaped/wind_vane/cast_iron')
 
     //Wind Turbine
     event.remove('weather2:wind_turbine')

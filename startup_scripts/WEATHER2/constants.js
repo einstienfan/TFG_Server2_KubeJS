@@ -18,3 +18,24 @@ global.WEATHER2_TFC_SAND_COLORS = [
     'green',
     'pink'
 ]
+
+global.WEATHER2_TFC_METAL_TYPES = [
+    'bismuth',
+    'bismuth_bronze',
+    'black_bronze',
+    'bronze',
+    'brass',
+    'copper',
+    'gold',
+    'nickel',
+    'rose_gold',
+    'silver',
+    'sterling_silver',
+    'zinc',
+    'tin',
+    'wrought_iron',
+    'steel',
+    'black_steel',
+    'blue_steel',
+    'red_steel'
+]
