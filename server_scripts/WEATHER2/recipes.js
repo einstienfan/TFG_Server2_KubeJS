@@ -16,7 +16,7 @@ const registerWEATHER2Recipes = (event) => {
                 'ACA'
             ],
             {
-                A: 'gtceu:double_' + metal + '_plate',
+                A: '#forge:sheets/' + metal,
                 B: 'gtceu:small_brass_gear',
                 C: 'gtceu:' + metal + '_rod'
             }
@@ -30,7 +30,7 @@ const registerWEATHER2Recipes = (event) => {
                 'ACA'
             ],
             {
-                A: 'gtceu:double_' + metal + '_plate',
+                A: '#forge:sheets/' + metal,
                 B: 'gtceu:small_brass_gear',
                 C: 'gtceu:' + metal + '_rod'
             }
@@ -46,7 +46,7 @@ const registerWEATHER2Recipes = (event) => {
                 'ACA'
             ],
             {
-                A: 'gtceu:double_iron_plate',
+                A: '#forge:sheets/iron',
                 B: 'gtceu:small_brass_gear',
                 C: 'gtceu:iron_rod'
             }
@@ -60,7 +60,7 @@ const registerWEATHER2Recipes = (event) => {
                 'ACA'
             ],
             {
-                A: 'gtceu:double_iron_plate',
+                A: '#forge:sheets/iron',
                 B: 'gtceu:small_brass_gear',
                 C: 'gtceu:iron_rod'
             }
